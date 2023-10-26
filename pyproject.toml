@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mot-vis"
+version = "0.1.0"
+description = "Visualize multi-object tracking (MOT) results in MOT17 format."
+authors = ["Jonathan Yang <hi@jyang.cc>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "mot_vis"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+opencv-python = "^4.8.1.78"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
