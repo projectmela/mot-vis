@@ -96,7 +96,7 @@ def plot_frames_to_frames(
         mot_dets: np.ndarray,
         save_dir_path: Union[str, Path],
 ):
-    """plot MOT format detections on frames from frame_paths
+    """plot MOT format predictions (annotations) on frames from frame_paths and save it as frames
     :param frame_paths: list of paths to frames
     :param mot_dets: MOT format detections, shape (n_dets, 10), MOT format: https://motchallenge.net/instructions/
     <frame>, <id>, <bb_left>, <bb_top>, <bb_width>, <bb_height>, <conf>, <x>, <y>, <z>
@@ -133,7 +133,7 @@ def plot_from_video_to_video(
         frame_rate: float = None,
         save_path: Optional[Union[str, Path]] = None,
 ):
-    """plot predictions (annotations) on frames read from video and save it to a new video
+    """plot MOT format predictions (annotations) on frames read from a video and save it to a new video
     :param src_video_path: path to the video to plot on
     :param mot_anno_path: path to the MOT format annotation file
     [MOT format](https://motchallenge.net/instructions/):
@@ -205,7 +205,7 @@ def plot_frames_to_video(
         save_path: Optional[Union[str, Path]] = None,
         frame_rate: float = 30.0,
 ):
-    """save frames into a video
+    """plot MOT format predictions (annotations) on frames from frame_paths and save it as a new video
     :param frame_paths: list of paths to frames
     :param mot_dets: MOT format detections, shape (n_dets, 10), MOT format: https://motchallenge.net/instructions/
     <frame>, <id>, <bb_left>, <bb_top>, <bb_width>, <bb_height>, <conf>, <x>, <y>, <z>
