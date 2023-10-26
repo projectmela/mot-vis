@@ -17,7 +17,16 @@ Frames starting from 1 is strictly required.
 - Annotation: a single `.txt`` file with the format above.
 - Media: Image directory / video
 
-```angular2html
+```shell
+git clone https://github.com/projectmela/mot-vis.git
+
+cd mot-vis
+
+# install the repo as a package
+pip install .
+# or use poetry to install dependencies
+poetry install
+
 # plot from video/frames to video
 python plot_to_video.py \
     -s path/to/video.mp4 \
