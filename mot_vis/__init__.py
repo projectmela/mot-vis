@@ -7,7 +7,7 @@ import numpy as np
 from loguru import logger
 from tqdm.auto import tqdm
 
-from mot_viz.io import load_mot_annotation
+from mot_vis.io import load_mot_annotation
 
 
 def frame_from_video(video: cv2.VideoCapture, start_frame: int = 0, end_frame: int = -1):

@@ -3,8 +3,8 @@ from pathlib import Path
 
 from loguru import logger
 
-from mot_viz import plot_frames_to_video, plot_from_video_to_video
-from mot_viz.io import get_frame_paths
+from mot_vis import plot_frames_to_video, plot_from_video_to_video
+from mot_vis.io import get_frame_paths
 
 parser = argparse.ArgumentParser(description="Plotting detection on the image.")
 parser.add_argument("-s", "--src", type=str, required=True,
