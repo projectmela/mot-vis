@@ -69,7 +69,7 @@ def get_frame_paths(frames_dir: Union[Path, str]) -> list[Path]:
 
     newline = "\n"
     logger.warning(
-        "Order of frame paths is as following:\n"
+        "Order of frame paths read as following:\n"
         f"{newline.join([str(p) for p in frame_paths[:5]])}"
     )
 

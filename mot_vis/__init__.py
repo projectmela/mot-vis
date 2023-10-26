@@ -219,7 +219,7 @@ def plot_frames_to_video(
         frame_paths = [Path(f) for f in frame_paths]
 
     newline = "\n"
-    logger.warning(
+    logger.debug(
         "Video frames will be in the order of the frame paths.\n"
         "Here is the order of first 5 images:\n"
         f"{newline.join([str(p) for p in frame_paths[:5]])}"
