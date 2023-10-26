@@ -32,5 +32,6 @@ if __name__ == "__main__":
         plot_frames_to_video(frame_paths, anno_file_path, output_dir_path)
     else:
         video_exts = [".mp4", ".avi", ".mov"]
+        video_exts += [ext.upper() for ext in video_exts] # add uppercase extensions
         assert src_path.suffix in video_exts, f"Video file should have extension in {video_exts}, got {src_path.suffix}"
         plot_from_video_to_video(src_video_path=src_path, mot_anno_path=anno_file_path, save_path=output_dir_path)
