@@ -26,7 +26,12 @@ def verify_mot_format(mot_dets: np.ndarray) -> None:
     :param mot_dets: mot format annotations
     """
     # frame id should start with 1 (1-based)
-    assert mot_dets[:, 0].min() == 1, "Frame id should start with 1 (MOT format is 1-based)"
+    min_frame = mot_dets[:, 0].min()
+    if min_frame != 1:
+        logger.warning(
+            "Frame in MOTChallenge submission format should start with 1,"
+            f"got: {min_frame}"
+        )
     # check no nan
     assert not np.isnan(mot_dets).any(), "NaN detected in MOT format annotations"
     # check shape
